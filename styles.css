@@ -1,0 +1,51 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Part 1: Button hover (CSS Transition) */
+.btn {
+  padding: 10px 20px;
+  background: dodgerblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+.btn:hover {
+  background: navy;
+  transform: scale(1.1);
+}
+
+/* Part 2: Box for animation */
+#box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: crimson;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Part 3: CSS Keyframes */
+@keyframes slideAndFade {
+  from { transform: translateX(-200px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Modal styles */
+#modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  margin: 100px auto;
+  width: 250px;
+  animation: slideAndFade 0.5s ease-out;
+}
